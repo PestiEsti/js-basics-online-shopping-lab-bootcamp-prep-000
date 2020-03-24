@@ -22,8 +22,8 @@ function viewCart() {
   } else {
     let response=`In your cart, you have `;
     response=`${response}${cart[0].itemName} at $${cart[0].itemPrice}`;
-    for(let i=0;i<cart.length;i++) {
-      
+    for(let i=1;i<cart.length-1;i++) {
+      response=`${response}, ${cart[i].itemName} at $${cart[i].itemPrice}`;
     }
     if (cart.length>1){
       response=`${response}, and ${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}`;
