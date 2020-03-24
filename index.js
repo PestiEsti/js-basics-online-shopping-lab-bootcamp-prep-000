@@ -25,6 +25,9 @@ function viewCart() {
     for(let i=0;i<cart.length;i++) {
       
     }
+    if (cart.length>1){
+      response=`, and ${response}${cart[cart.length-1].itemName} at $${cart[cart.length-1].itemPrice}`;
+    }
     response=`${response}.`
     return(response)
   }
