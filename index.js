@@ -21,10 +21,11 @@ function viewCart() {
     return(`Your shopping cart is empty.`);
   } else {
     let response=`In your cart, you have `;
-    response=`${response}${cart[0].itemName} at `
+    response=`${response}${cart[0].itemName} at ${cart[0].itemPrice}`;
     for(let i=0;i<cart.length;i++) {
       
     }
+    response=`${response}.`
     return(response)
   }
 }
